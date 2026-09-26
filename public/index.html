@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>ALPHA 1</title>
+
+  <style>
+
+    * {
+      box-sizing:border-box;
+    }
+
+    body {
+      margin:0;
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background:#07111f;
+      color:#eef5ff;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font:inherit;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap {
+      width:
+        min(
+          1180px,
+          calc(100% - 32px)
+        );
+
+      margin:auto;
+    }
+
+    .nav {
+      height:72px;
+
+      border-bottom:
+        1px solid
+        #20324a;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .brand {
+      font-weight:900;
+      letter-spacing:.14em;
+    }
+
+    .btn {
+      border:0;
+
+      border-radius:12px;
+
+      padding:
+        12px 16px;
+
+      font-weight:800;
+
+      cursor:pointer;
+
+      background:#39d3a6;
+
+      color:#03120e;
+    }
+
+    .btn.alt {
+      background:#12243a;
+      color:#fff;
+
+      border:
+        1px solid
+        #26405d;
+    }
+
+    .hero {
+      padding:
+        90px 0;
+    }
+
+    .eyebrow {
+      color:#49e0b4;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .hero h1 {
+      font-size:
+        clamp(
+          42px,
+          7vw,
+          78px
+        );
+
+      line-height:1;
+
+      margin:
+        12px 0;
+    }
+
+    .hero p {
+      max-width:750px;
+      color:#9fb0c8;
+      font-size:18px;
+    }
+
+    .actions {
+      display:flex;
+
+      gap:12px;
+
+      flex-wrap:wrap;
+
+      margin-top:28px;
+    }
+
+    .cards {
+      display:grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0,1fr)
+        );
+
+      gap:18px;
+    }
+
+    .card {
+      background:#0e1c2f;
+
+      border:
+        1px solid
+        #20324a;
+
+      border-radius:20px;
+
+      padding:22px;
+    }
+
+    .muted {
+      color:#9fb0c8;
+    }
+
+    .form {
+      max-width:520px;
+
+      display:grid;
+
+      gap:15px;
+    }
+
+    label {
+      display:block;
+
+      margin-bottom:7px;
+
+      font-weight:700;
+    }
+
+    input,
+    textarea,
+    select {
+      width:100%;
+
+      padding:12px;
+
+      border:
+        1px solid
+        #26405d;
+
+      border-radius:12px;
+
+      background:#071524;
+
+      color:white;
+
+      outline:none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color:#39d3a6;
+    }
+
+    .status {
+      margin-top:15px;
+
+      padding:12px;
+
+      border-radius:12px;
+
+      background:#0b192d;
+
+      border:
+        1px solid
+        #213955;
+
+      color:#9fb0c8;
+    }
+
+    .success {
+      color:#87f5d2;
+    }
+
+    .error {
+      color:#ff929d;
+    }
+
+    @media(max-width:800px) {
+
+      .cards {
+        grid-template-columns:1fr;
+      }
+
+      .hero {
+        padding:
+          60px 0;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<nav class="nav wrap">
+
+  <a
+    class="brand"
+    href="/"
+  >
+    ALPHA 1
+  </a>
+
+  <div class="actions" style="margin:0">
+
+    <a
+      class="btn alt"
+      href="#login"
+    >
+      Login
+    </a>
+
+    <a
+      class="btn"
+      href="#register"
+    >
+      Create account
+    </a>
+
+  </div>
+
+</nav>
+
+<main class="wrap">
+
+  <section class="hero">
+
+    <div class="eyebrow">
+      Professional Forex Platform
+    </div>
+
+    <h1>
+      ALPHA 1
+    </h1>
+
+    <p>
+      A production architecture for
+      user accounts, identity
+      verification, M-Pesa deposits,
+      wallet management and
+      broker-connected forex trading.
+    </p>
+
+    <div class="actions">
+
+      <a
+        class="btn"
+        href="#register"
+      >
+        Create account
+      </a>
+
+      <a
+        class="btn alt"
+        href="#login"
+      >
+        Sign in
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="cards">
+
+    <article class="card">
+
+      <div class="eyebrow">
+        KYC
+      </div>
+
+      <h3>
+        Front + Back ID
+      </h3>
+
+      <p class="muted">
+        Users can submit the front
+        and back of their ID separately
+        for private server-side storage
+        and administration.
+      </p>
+
+    </article>
+
+    <article class="card">
+
+      <div class="eyebrow">
+        M-Pesa
+      </div>
+
+      <h3>
+        Deposit workflow
+      </h3>
+
+      <p class="muted">
+        Start a deposit request,
+        submit the M-Pesa reference
+        and confirmation message,
+        then allow verification before
+        wallet crediting.
+      </p>
+
+    </article>
+
+    <article class="card">
+
+      <div class="eyebrow">
+        Trading
+      </div>
+
+      <h3>
+        Broker integration
+      </h3>
+
+      <p class="muted">
+        The backend is structured so
+        real quotes and execution come
+        from a configured broker instead
+        of fake prices.
+      </p>
+
+    </article>
+
+  </section>
+
+  <section
+    id="register"
+    class="card"
+    style="margin-top:40px"
+  >
+
+    <h2>
+      Create ALPHA 1 account
+    </h2>
+
+    <form
+      id="registerForm"
+      class="form"
+    >
+
+      <div>
+
+        <label>
+          Email
+        </label>
+
+        <input
+          id="registerEmail"
+          type="email"
+          required
+        >
+
+      </div>
+
+      <div>
+
+        <label>
+          Phone
+        </label>
+
+        <input
+          id="registerPhone"
+          required
+        >
+
+      </div>
+
+      <div>
+
+        <label>
+          ID Number
+        </label>
+
+        <input
+          id="registerId"
+          required
+        >
+
+      </div>
+
+      <div>
+
+        <label>
+          Password
+        </label>
+
+        <input
+          id="registerPassword"
+          type="password"
+          minlength="10"
+          required
+        >
+
+      </div>
+
+      <button
+        class="btn"
+        type="submit"
+      >
+        Create account
+      </button>
+
+    </form>
+
+    <div
+      id="registerStatus"
+      class="status"
+    ></div>
+
+  </section>
+
+  <section
+    id="login"
+    class="card"
+    style="margin:18px 0 60px"
+  >
+
+    <h2>
+      Sign in
+    </h2>
+
+    <form
+      id="loginForm"
+      class="form"
+    >
+
+      <div>
+
+        <label>
+          Email
+        </label>
+
+        <input
+          id="loginEmail"
+          type="email"
+          required
+        >
+
+      </div>
+
+      <div>
+
+        <label>
+          Password
+        </label>
+
+        <input
+          id="loginPassword"
+          type="password"
+          required
+        >
+
+      </div>
+
+      <button
+        class="btn"
+        type="submit"
+      >
+        Sign in
+      </button>
+
+    </form>
+
+    <div
+      id="loginStatus"
+      class="status"
+    ></div>
+
+  </section>
+
+</main>
+
+<script>
+
+const registerForm =
+  document.getElementById(
+    'registerForm'
+  );
+
+const loginForm =
+  document.getElementById(
+    'loginForm'
+  );
+
+const registerStatus =
+  document.getElementById(
+    'registerStatus'
+  );
+
+const loginStatus =
+  document.getElementById(
+    'loginStatus'
+  );
+
+let csrfToken =
+  '';
+
+function showStatus(
+  el,
+  message,
+  ok = false
+) {
+  el.textContent =
+    message;
+
+  el.className =
+    ok
+      ? 'status success'
+      : 'status error';
+}
+
+registerForm.addEventListener(
+  'submit',
+  async (event) => {
+
+    event.preventDefault();
+
+    showStatus(
+      registerStatus,
+      'Creating account...',
+      false
+    );
+
+    try {
+
+      const response =
+        await fetch(
+          '/api/auth/register',
+          {
+            method:'POST',
+
+            headers:{
+              'Content-Type':
+                'application/json'
+            },
+
+            body:
+              JSON.stringify({
+                email:
+                  document
+                    .getElementById(
+                      'registerEmail'
+                    ).value,
+
+                phone:
+                  document
+                    .getElementById(
+                      'registerPhone'
+                    ).value,
+
+                idNumber:
+                  document
+                    .getElementById(
+                      'registerId'
+                    ).value,
+
+                password:
+                  document
+                    .getElementById(
+                      'registerPassword'
+                    ).value
+              })
+          }
+        );
+
+      const data =
+        await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message ||
+          'Registration failed'
+        );
+      }
+
+      csrfToken =
+        data.csrfToken;
+
+      showStatus(
+        registerStatus,
+        'Account created successfully.',
+        true
+      );
+
+      setTimeout(
+        () => {
+          location.href =
+            '/dashboard.html';
+        },
+        700
+      );
+
+    } catch (error) {
+
+      showStatus(
+        registerStatus,
+        error.message,
+        false
+      );
+    }
+
+  }
+);
+
+loginForm.addEventListener(
+  'submit',
+  async (event) => {
+
+    event.preventDefault();
+
+    showStatus(
+      loginStatus,
+      'Signing in...',
+      false
+    );
+
+    try {
+
+      const response =
+        await fetch(
+          '/api/auth/login',
+          {
+            method:'POST',
+
+            headers:{
+              'Content-Type':
+                'application/json'
+            },
+
+            body:
+              JSON.stringify({
+                email:
+                  document
+                    .getElementById(
+                      'loginEmail'
+                    ).value,
+
+                password:
+                  document
+                    .getElementById(
+                      'loginPassword'
+                    ).value
+              })
+          }
+        );
+
+      const data =
+        await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message ||
+          'Login failed'
+        );
+      }
+
+      csrfToken =
+        data.csrfToken;
+
+      showStatus(
+        loginStatus,
+        'Login successful.',
+        true
+      );
+
+      setTimeout(
+        () => {
+
+          location.href =
+            data.role === 'admin'
+              ? '/admin.html'
+              : '/dashboard.html';
+
+        },
+        500
+      );
+
+    } catch (error) {
+
+      showStatus(
+        loginStatus,
+        error.message,
+        false
+      );
+    }
+
+  }
+);
+
+</script>
+
+</body>
+</html>
